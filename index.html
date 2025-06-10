@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amir - Minecraft Server Developer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
+            color: #e6e6ff;
+            min-height: 100vh;
+        }
+        
+        .hero-bg {
+            background-image: url('https://smait215.carrd.co/assets/images/image01.jpg?v=ad845e62');
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+        
+        .hero-bg::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, rgba(22, 33, 62, 0.85) 0%, rgba(16, 23, 42, 0.85) 100%);
+        }
+        
+        .section {
+            background: rgba(25, 35, 65, 0.6);
+            backdrop-filter: blur(10px);
+            border-radius: 16px;
+            border: 1px solid rgba(92, 107, 192, 0.2);
+            overflow: hidden;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+        
+        .section-title {
+            position: relative;
+            padding-bottom: 0.5rem;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 3px;
+            background: linear-gradient(90deg, #8a2387, #e94057, #f27121);
+            border-radius: 3px;
+        }
+        
+        .experience-item {
+            position: relative;
+            padding-left: 1.5rem;
+            border-left: 2px solid #4f5d95;
+            transition: all 0.3s ease;
+        }
+        
+        .experience-item::before {
+            content: '';
+            position: absolute;
+            left: -0.45rem;
+            top: 0.35rem;
+            width: 0.9rem;
+            height: 0.9rem;
+            background: #8a2387;
+            border-radius: 50%;
+            box-shadow: 0 0 0 4px rgba(138, 35, 135, 0.2);
+        }
+        
+        .experience-item:hover {
+            background: rgba(79, 93, 149, 0.15);
+            border-left: 2px solid #e94057;
+            transform: translateX(5px);
+        }
+        
+        .social-btn {
+            transition: all 0.3s ease;
+            border: 1px solid rgba(92, 107, 192, 0.3);
+        }
+        
+        .social-btn:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        .cube {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            background: rgba(79, 93, 149, 0.15);
+            border: 1px solid rgba(138, 35, 135, 0.5);
+            animation: cubeAnimation 10s infinite linear;
+        }
+        
+        .c1 { top: 10%; left: 15%; animation-duration: 15s; }
+        .c2 { top: 20%; right: 10%; animation-duration: 12s; }
+        .c3 { bottom: 30%; left: 5%; animation-duration: 18s; }
+        .c4 { bottom: 15%; right: 20%; animation-duration: 14s; }
+        
+        @keyframes cubeAnimation {
+            0% { transform: rotate(0deg) scale(1); }
+            50% { transform: rotate(180deg) scale(0.8); }
+            100% { transform: rotate(360deg) scale(1); }
+        }
+        
+        .minecraft-border {
+            position: relative;
+        }
+        
+        .minecraft-border::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 3px;
+            background: linear-gradient(90deg, #8a2387, #e94057, #f27121);
+            border-radius: 3px;
+        }
+        
+        .highlight {
+            position: relative;
+            display: inline-block;
+            z-index: 1;
+        }
+        
+        .highlight::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: -0.25rem;
+            width: calc(100% + 0.5rem);
+            height: 50%;
+            background: rgba(138, 35, 135, 0.3);
+            z-index: -1;
+            transform: skewX(-15deg);
+        }
+    </style>
+</head>
+<body class="relative overflow-x-hidden">
+    <!-- Floating cubes in background -->
+    <div class="cube c1"></div>
+    <div class="cube c2"></div>
+    <div class="cube c3"></div>
+    <div class="cube c4"></div>
+    
+    <div class="min-h-screen flex flex-col lg:flex-row">
+        <!-- Left Column - Hero Section -->
+        <div class="w-full lg:w-1/3 hero-bg flex flex-col justify-between p-8 lg:p-12 relative">
+            <div class="relative z-10">
+                <h1 class="text-4xl md:text-5xl font-bold mb-2" data-aos="fade-up">Hi, I'm <span class="highlight">Amir</span></h1>
+                <div class="minecraft-border">
+                    <p class="text-xl text-indigo-200 font-light mb-8" data-aos="fade-up" data-aos-delay="100">
+                        Minecraft Servers Developer & Manager
+                    </p>
+                </div>
+                
+                <div class="mt-10">
+                    <p class="text-lg leading-relaxed mb-6" data-aos="fade-up" data-aos-delay="200">
+                        I'm a 17 year old Minecraft servers developer and manager. I love learning new things and using them to build better servers. I've worked with plugins, server setups, and even worked as staff to keep everything running smoothly.
+                    </p>
+                    
+                    <div class="mt-10">
+                        <h2 class="section-title text-2xl font-bold mb-6" data-aos="fade-up" data-aos-delay="300">
+                            Communication <span class="text-indigo-300">&</span> Languages
+                        </h2>
+                        <p class="text-lg leading-relaxed" data-aos="fade-up" data-aos-delay="400">
+                            Managing servers taught me how to lead teams, resolve conflicts, and keep communities engaged. I'm fluent in 
+                            <span class="text-purple-300">English</span>, 
+                            <span class="text-blue-300">French</span>, and 
+                            <span class="text-emerald-300">Arabic</span>, which helps me work with players and developers from all over the world.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <!-- Right Column - Content Sections -->
+        <div class="w-full lg:w-2/3 p-6 lg:p-12 flex flex-col">
+            <!-- Experience Section -->
+            <div class="section p-8 mb-8" data-aos="fade-up">
+                <h2 class="section-title text-3xl font-bold mb-8" data-aos="fade-up">
+                    My Experience
+                </h2>
+                
+                <p class="text-lg mb-8" data-aos="fade-up" data-aos-delay="100">
+                    I've worked on multiple Minecraft servers, handling both staff roles and development:
+                </p>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Staff Roles -->
+                    <div data-aos="fade-right">
+                        <h3 class="text-xl font-semibold mb-4 text-pink-400 flex items-center">
+                            <i class="fas fa-user-shield mr-3"></i>
+                            Staff Roles
+                        </h3>
+                        <ul class="space-y-4">
+                            <li class="experience-item">
+                                <h4 class="font-medium">Minemate → <span class="text-purple-300">Jr. Admin</span></h4>
+                                <p class="text-sm text-indigo-200">3 months, server raided & shut down</p>
+                            </li>
+                            <li class="experience-item">
+                                <h4 class="font-medium">Block Bay → <span class="text-blue-300">Jr. Admin</span> → Retired → Returned as <span class="text-emerald-300">Sr. Moderator</span></h4>
+                                <p class="text-sm text-indigo-200">Current position</p>
+                            </li>
+                            <li class="experience-item">
+                                <h4 class="font-medium">Negalium (French server) → <span class="text-yellow-300">Helper</span></h4>
+                                <p class="text-sm text-indigo-200">3 months, server closed</p>
+                            </li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Development -->
+                    <div data-aos="fade-left">
+                        <h3 class="text-xl font-semibold mb-4 text-green-400 flex items-center">
+                            <i class="fas fa-code mr-3"></i>
+                            Development
+                        </h3>
+                        <div class="experience-item">
+                            <p class="text-lg">
+                                I've built and configured multiple servers, setting up plugins and optimizing performance. I enjoy the technical and creative sides of server management.
+                            </p>
+                        </div>
+                        <div class="mt-4 p-4 bg-indigo-900/30 rounded-lg border border-indigo-800/50">
+                            <p class="flex items-center">
+                                <i class="fas fa-tools mr-2 text-amber-400"></i>
+                                <span class="font-medium">Technical skills:</span>
+                                <span class="ml-2 text-indigo-200">Server setup, Plugin configuration, Performance optimization, Community management</span>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Web Development Skills -->
+            <div class="section p-8 mb-8" data-aos="fade-up">
+                <h2 class="section-title text-3xl font-bold mb-8">
+                   Development Skills
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div data-aos="fade-right" data-aos-delay="100">
+                        <h3 class="text-xl font-semibold mb-4 text-blue-400 flex items-center">
+                            <i class="fab fa-html5 mr-3"></i>
+                            HTML & CSS
+                        </h3>
+                        <div class="experience-item">
+                            <p class="text-lg">
+                                Comfortable with creating page layouts, styling elements, and implementing simple responsive designs. Still actively learning and improving these skills..
+                            </p>
+                            <div class="mt-4">
+                                <div class="h-2 w-full bg-gray-800 rounded-full overflow-hidden">
+                                    <div class="h-full bg-blue-500 rounded-full" style="width: 55%"></div>
+                                </div>
+                                <span class="text-sm text-blue-300 mt-1 inline-block">55% Proficiency</span>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div data-aos="fade-left" data-aos-delay="200">
+                        <h3 class="text-xl font-semibold mb-4 text-yellow-400 flex items-center">
+                            <i class="fab fa-js mr-3"></i>
+                            JavaScript
+                        </h3>
+                        <div class="experience-item">
+                            <p class="text-lg">
+                               I understand Java basics (variables, loops, etc.) and simple plugin structures. Have used Java for simple Minecraft plugin modifications. Currently learning more advanced concepts.
+                            </p>
+                            <div class="mt-4">
+                                <div class="h-2 w-full bg-gray-800 rounded-full overflow-hidden">
+                                    <div class="h-full bg-yellow-500 rounded-full" style="width: 50%"></div>
+                                </div>
+                                <span class="text-sm text-yellow-300 mt-1 inline-block">50% Proficiency</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Social Links -->
+            <div class="section p-8" data-aos="fade-up">
+                <h2 class="section-title text-3xl font-bold mb-8" data-aos="fade-up">
+                    Connect With Me
+                </h2>
+                
+                <p class="text-lg mb-8">
+                    Let's collaborate or just chat about Minecraft servers and development!
+                </p>
+                
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-4" data-aos="fade-up" data-aos-delay="200">
+                    <a href="https://instagram.com/amir_sq8" class="social-btn bg-gradient-to-r from-pink-900 to-rose-900 p-5 rounded-xl flex flex-col items-center justify-center text-center transition-all duration-300">
+                        <i class="fab fa-instagram text-3xl mb-3 text-pink-300"></i>
+                        <span class="font-medium">amir_sq8</span>
+                    </a>
+                    
+                    <a href="mailto:ahmedamour546@gmail.com" class="social-btn bg-gradient-to-r from-amber-900 to-orange-900 p-5 rounded-xl flex flex-col items-center justify-center text-center transition-all duration-300">
+                        <i class="fas fa-envelope text-3xl mb-3 text-amber-300"></i>
+                        <span class="font-medium">Email</span>
+                    </a>
+
+                    <a href="https://discord.com/users/amir56.2" class="social-btn bg-gradient-to-r from-indigo-900 to-purple-900 p-5 rounded-xl flex flex-col items-center justify-center text-center transition-all duration-300">
+                        <i class="fab fa-discord text-3xl mb-3 text-indigo-300"></i>
+                        <span class="font-medium">amir56.2</span>
+                    </a>
+                </div>
+            </div>
+            
+            <!-- Skills & Languages -->
+            <div class="mt-8 grid grid-cols-1 sm:grid-cols-2 gap-4" data-aos="fade-up">
+                <div class="section p-6 flex items-center">
+                    <div class="mr-4 text-4xl text-blue-400">
+                        <i class="fas fa-server"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg">Server Expertise</h3>
+                        <p class="text-sm text-indigo-200">Setup, configuration & optimization</p>
+                    </div>
+                </div>
+                
+                <div class="section p-6 flex items-center">
+                    <div class="mr-4 text-4xl text-green-400">
+                        <i class="fas fa-language"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-bold text-lg">Multilingual</h3>
+                        <p class="text-sm text-indigo-200">English, French & Arabic</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out',
+            once: true
+        });
+    </script>
+
+    <!-- Footer -->
+    <footer class="py-6 text-center text-indigo-300 text-sm border-t border-indigo-900/50">
+        <p>© 2023 Amir - Minecraft Server Developer & Manager</p>
+        <p class="mt-1 text-indigo-400/50">Designed with passion for server communities</p>
+    </footer>
+<p style="border-radius: 8px; text-align: center; font-size: 12px; color: #fff; margin-top: 16px;position: fixed; left: 8px; bottom: 8px; z-index: 10; background: rgba(0, 0, 0, 0.8); padding: 4px 8px;">Made with <img src="https://enzostvs-deepsite.hf.space/logo.svg" alt="DeepSite Logo" style="width: 16px; height: 16px; vertical-align: middle;display:inline-block;margin-right:3px;filter:brightness(0) invert(1);"><a href="https://enzostvs-deepsite.hf.space" style="color: #fff;text-decoration: underline;" target="_blank" >DeepSite</a> - 🧬 <a href="https://enzostvs-deepsite.hf.space?remix=v3x65az/my-website" style="color: #fff;text-decoration: underline;" target="_blank" >Remix</a></p></body>
+</html>
